@@ -1,69 +1,40 @@
-# Memory porting and ii
+# Memory porting and II
 
 
 
-<br />
-<p align="center">
 
-  <h3 align="center">MSOC-HLS project github template</h3>
-  
-</p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-* [Usage](#usage)
-* [Algorithm](#Algorithm)
-* [References](#References)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a template github repository for hls projects with credits >3.
+* The project shows how memory porting affects latency and II taking matrix multiplication as example
 
 **Directory structure**
+* **syn_report/** - HLS synthesis reports for different solutions
 * **README.md** - introduce the project, algorithm, reference ....
-* **code/**
-  * original - original code from open source if there is 
-  * final (use inline pragma) - include both host and kernel code ※Note: host code must do auto-check
-* **code-opt/** - Note it may have multiple code directories for different code structure, named by code-opt  (opt refer to optimization method, e.g. code-OoO  Out-Of-Order)
-  * ...
-* **testdata/** - include input test data, and output result data
-* **script/** - makefile
-  * ... - Build process shall include a trial-run with result check. 
-* **impl/** - result of the implementation, only the metafile, and report, e.g. vitis summary file, HLS csynth report
-      
-
+* **design_1.bit, design_1.hwh** - bitstream and hw_handoff for FPGA
+* **matrixmul.cpp** - kernel function
+* **matrixmul.h** - header file
+* **matrixmul_test.cpp** - testbench
+* **memory_port_ii.ipynb** - FPGA python host program 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* build process
-
+* **HLS Simulation:** use matrixmul.cpp, matrixmul.h as source and matrixmul_test.cpp as testbench on Vivado HLS
+* **FPGA:** use memory_port_ii.ipynb to run on Zedboard
 ## Algorithm
-
+* Matrix multiplication
 
 ## References
+* ~Xilinx/Vivado/2019.2/examples/design
 
 <!-- CONTRIBUTING -->
 ## Contributing
+* resolve limited port issue and improve latency
 
 
 
-<!-- LICENSE -->
-## License
-
-
-
-<!-- CONTACT -->
-## Contact
 
 
 
