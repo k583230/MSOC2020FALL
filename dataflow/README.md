@@ -1,4 +1,4 @@
-# Dataflow
+# Memory porting and ii
 
 
 
@@ -51,19 +51,14 @@ This is a template github repository for hls projects with credits >3.
 
 
 ## References
+~Xilinx/Vivado/2019.2/examples/design
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
 
 
-<!-- LICENSE -->
-## License
 
-
-
-<!-- CONTACT -->
-## Contact
 
 
 
