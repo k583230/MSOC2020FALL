@@ -8,7 +8,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a template github repository for hls projects with credits >3.
+
 
 **Directory structure**
 * **README.md** - introduce the project, algorithm, reference ....
@@ -26,10 +26,10 @@ This is a template github repository for hls projects with credits >3.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* build process
-
+* HLS Simulation: use example.cpp example.h as source and example_test.cpp as testbench on Vivado HLS
+* FPGA: use dataflow.ipynb to run on Zedboard
 ## Algorithm
-
+* Integer addition 
 
 ## References
 * ~Xilinx/Vivado/2019.2/examples/design
