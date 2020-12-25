@@ -1,27 +1,8 @@
-# Memory porting and ii
+# Memory porting and II
 
 
 
-<br />
-<p align="center">
 
-  <h3 align="center">MSOC-HLS project github template</h3>
-  
-</p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-* [Usage](#usage)
-* [Algorithm](#Algorithm)
-* [References](#References)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 
 
 
