@@ -51,11 +51,11 @@ This is a template github repository for hls projects with credits >3.
 
 
 ## References
-~Xilinx/Vivado/2019.2/examples/design
+* ~Xilinx/Vivado/2019.2/examples/design
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
+* resolve II violation and improve latency
 
 
 
