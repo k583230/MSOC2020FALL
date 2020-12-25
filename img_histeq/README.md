@@ -16,19 +16,19 @@
 * **README.md** - introduce the project, algorithm, reference ....
 * **design_2_hist.bit, design_2_hist.hwh** - bitstream and hw_handoff for FPGA
 * **img_hist.ipynb** - FPGA python host program 
-* **.npy** - output array from host program
+* **.npy** - output arrays from host program
 * **visualize.py** - python program using output arrays to show the result image
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* **HLS Simulation:** use example.cpp, example.h as source and example_test.cpp as testbench on Vivado HLS
-* **FPGA:** use dataflow.ipynb to run on Zedboard
+* **HLS Simulation:** use img_hist1.cpp as source and main_test.cpp as testbench on Vivado HLS
+* **FPGA:** use img_hist.ipynb to run on Zedboard
 ## Algorithm
 * 
 
 ## References
-* [HLx examples](https://github.com/Xilinx/HLx_Examples)
+* [HLx examples](https://github.com/Xilinx/HLx_Examples/tree/master/Vision/img_histEq)
 
 <!-- CONTRIBUTING -->
 ## Contributing
