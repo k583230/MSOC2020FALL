@@ -8,7 +8,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-* The project
+* The project can perform histogram equalization for a RGB image. However, the testbench and the previous histogram(used for equalizing histogram) set in this project is only for one channel, the work on FPGA is only the equalization result from the input G channel.
 
 **Directory structure**
 * **HLS/** - files for HLS 
@@ -31,7 +31,10 @@
 * **HLS Simulation:** use img_hist1.cpp as source and main_test.cpp as testbench on Vivado HLS
 * **FPGA:** use img_hist.ipynb to run on Zedboard
 ## Algorithm
-* 
+* Transfer the input RGB image to YUV domain
+* Use previous histogram and Y channel value to update new Y
+* Transfer back to RGB domain
+* Update new histogram for future usage
 
 ## References
 * [HLx examples](https://github.com/Xilinx/HLx_Examples/tree/master/Vision/img_histEq)
