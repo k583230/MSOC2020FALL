@@ -12,6 +12,8 @@
 
 **Directory structure**
 * **HLS/** - files for HLS 
+	* syn_report/ - HLS synthesis reports for different solutions
+	* test_data/ - image and input array for source and testbench
 * **data/** - image input for python host program 
 * **README.md** - introduce the project, algorithm, reference ....
 * **design_2_hist.bit, design_2_hist.hwh** - bitstream and hw_handoff for FPGA
