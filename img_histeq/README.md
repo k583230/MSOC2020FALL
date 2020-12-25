@@ -14,6 +14,10 @@
 * **HLS/** - files for HLS 
 	* syn_report/ - HLS synthesis reports for different solutions
 	* test_data/ - image and input array for source and testbench
+	* img_hist1.cpp - kernel function
+	* img_hist1.h - header file
+	* main_test.cpp - testbench
+	* other files - function or defines included by testbench and source
 * **data/** - image input for python host program 
 * **README.md** - introduce the project, algorithm, reference ....
 * **design_2_hist.bit, design_2_hist.hwh** - bitstream and hw_handoff for FPGA
@@ -34,7 +38,9 @@
 
 <!-- CONTRIBUTING -->
 ## Contributing
-* 
+* modify interface for Zedboard usage and visualize result
+* change memory storage to improve latency
+* resolve II violation
 
 
 
