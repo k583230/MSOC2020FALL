@@ -8,21 +8,16 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+* The project includes two parts. First saving ten numbers into an array, and then accumulate the numbers according to the input index except 0 or out of boundary.
 
 **Directory structure**
+* **syn_report** - HLS synthesis reports for different solutions
 * **README.md** - introduce the project, algorithm, reference ....
-* **code/**
-  * original - original code from open source if there is 
-  * final (use inline pragma) - include both host and kernel code ※Note: host code must do auto-check
-* **code-opt/** - Note it may have multiple code directories for different code structure, named by code-opt  (opt refer to optimization method, e.g. code-OoO  Out-Of-Order)
-  * ...
-* **testdata/** - include input test data, and output result data
-* **script/** - makefile
-  * ... - Build process shall include a trial-run with result check. 
-* **impl/** - result of the implementation, only the metafile, and report, e.g. vitis summary file, HLS csynth report
-      
-
+* **design_1.bit, design_1.hwh** - bitstream and hw_handoff for FPGA
+* **dataflow.ipynb** - FPGA python host program 
+* **example.cpp** - kernel function
+* **example.h** - header file
+* **example_test.cpp** - testbench
 
 <!-- USAGE EXAMPLES -->
 ## Usage
