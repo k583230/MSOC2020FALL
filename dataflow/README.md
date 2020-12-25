@@ -11,7 +11,7 @@
 * The project includes two parts. First saving ten numbers into an array, and then accumulate the numbers according to the input index except 0 or out of boundary.
 
 **Directory structure**
-* **syn_report** - HLS synthesis reports for different solutions
+* **syn_report/** - HLS synthesis reports for different solutions
 * **README.md** - introduce the project, algorithm, reference ....
 * **design_1.bit, design_1.hwh** - bitstream and hw_handoff for FPGA
 * **dataflow.ipynb** - FPGA python host program 
