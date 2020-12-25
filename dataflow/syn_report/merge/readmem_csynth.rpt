@@ -1,0 +1,136 @@
+
+
+================================================================
+== Vivado HLS Report for 'readmem'
+================================================================
+* Date:           Sun Dec 13 00:38:19 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        proj_stable_content
+* Solution:       merge
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 13.33 ns | 2.616 ns |   1.67 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       13|       13| 0.173 us | 0.173 us |   14|   14| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------+-----------+---------+---------+----------+----------+-----+-----+---------+
+        |              |           |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |   Instance   |   Module  |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------+-----------+---------+---------+----------+----------+-----+-----+---------+
+        |readmemAB_U0  |readmemAB  |       13|       13| 0.173 us | 0.173 us |   13|   13|   none  |
+        +--------------+-----------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      -|        -|        -|    -|
+|Expression           |        -|      -|        -|        -|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|       46|      215|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|        -|    -|
+|Register             |        -|      -|        -|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      0|       46|      215|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|      0|    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------+-----------+---------+-------+----+-----+-----+
+    |   Instance   |   Module  | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +--------------+-----------+---------+-------+----+-----+-----+
+    |readmemAB_U0  |readmemAB  |        0|      0|  46|  215|    0|
+    +--------------+-----------+---------+-------+----+-----+-----+
+    |Total         |           |        0|      0|  46|  215|    0|
+    +--------------+-----------+---------+-------+----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|in_strm_V_dout     |  in |   32|   ap_fifo  |   in_strm_V  |    pointer   |
+|in_strm_V_empty_n  |  in |    1|   ap_fifo  |   in_strm_V  |    pointer   |
+|in_strm_V_read     | out |    1|   ap_fifo  |   in_strm_V  |    pointer   |
+|out_strm_V_din     | out |   32|   ap_fifo  |  out_strm_V  |    pointer   |
+|out_strm_V_full_n  |  in |    1|   ap_fifo  |  out_strm_V  |    pointer   |
+|out_strm_V_write   | out |    1|   ap_fifo  |  out_strm_V  |    pointer   |
+|tb_address0        | out |    4|  ap_memory |      tb      |     array    |
+|tb_ce0             | out |    1|  ap_memory |      tb      |     array    |
+|tb_d0              | out |   32|  ap_memory |      tb      |     array    |
+|tb_q0              |  in |   32|  ap_memory |      tb      |     array    |
+|tb_we0             | out |    1|  ap_memory |      tb      |     array    |
+|tb_address1        | out |    4|  ap_memory |      tb      |     array    |
+|tb_ce1             | out |    1|  ap_memory |      tb      |     array    |
+|tb_d1              | out |   32|  ap_memory |      tb      |     array    |
+|tb_q1              |  in |   32|  ap_memory |      tb      |     array    |
+|tb_we1             | out |    1|  ap_memory |      tb      |     array    |
+|ap_clk             |  in |    1| ap_ctrl_hs |    readmem   | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |    readmem   | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |    readmem   | return value |
+|ap_done            | out |    1| ap_ctrl_hs |    readmem   | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |    readmem   | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |    readmem   | return value |
+|ap_continue        |  in |    1| ap_ctrl_hs |    readmem   | return value |
++-------------------+-----+-----+------------+--------------+--------------+
+

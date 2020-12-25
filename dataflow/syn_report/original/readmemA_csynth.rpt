@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vivado HLS Report for 'readmemA'
+================================================================
+* Date:           Sat Dec 12 21:55:42 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        proj_stable_content
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 13.33 ns | 2.616 ns |   1.67 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       11|       11| 0.147 us | 0.147 us |   10|   10| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      -|        -|        -|    -|
+|Expression           |        -|      -|        0|       64|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|        -|        -|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|      175|    -|
+|Register             |        -|      -|       88|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      0|       88|      239|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|      0|    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_pp0_stage3_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage4_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage5_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage6_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage7_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage8_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage9_01001          |    and   |      0|  0|   2|           1|           1|
+    |grp_fu_137_p2                      |   icmp   |      0|  0|  20|          32|           4|
+    |ap_block_pp0_stage0_01001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_01001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage2_01001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state10_pp0_stage9_iter0  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state11_pp0_stage0_iter1  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state12_pp0_stage1_iter1  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage2_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage3_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state5_pp0_stage4_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state6_pp0_stage5_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state7_pp0_stage6_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state8_pp0_stage7_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state9_pp0_stage8_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0|  64|          54|          27|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  50|         11|    1|         11|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |in_strm_V_blk_n          |   9|          2|    1|          2|
+    |real_start               |   9|          2|    1|          2|
+    |req_strm_V_blk_n         |   9|          2|    1|          2|
+    |req_strm_V_din           |  21|          4|   32|        128|
+    |tb_address0              |  50|         11|    4|         44|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 175|         38|   43|        195|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |  10|   0|   10|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |icmp_ln25_1_reg_217          |   1|   0|    1|          0|
+    |icmp_ln25_2_reg_226          |   1|   0|    1|          0|
+    |icmp_ln25_3_reg_235          |   1|   0|    1|          0|
+    |icmp_ln25_4_reg_244          |   1|   0|    1|          0|
+    |icmp_ln25_5_reg_253          |   1|   0|    1|          0|
+    |icmp_ln25_6_reg_262          |   1|   0|    1|          0|
+    |icmp_ln25_7_reg_271          |   1|   0|    1|          0|
+    |icmp_ln25_8_reg_280          |   1|   0|    1|          0|
+    |icmp_ln25_9_reg_289          |   1|   0|    1|          0|
+    |icmp_ln25_reg_208            |   1|   0|    1|          0|
+    |reg_143                      |  32|   0|   32|          0|
+    |reg_148                      |  32|   0|   32|          0|
+    |start_once_reg               |   1|   0|    1|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  88|   0|   88|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|start_full_n       |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_done            | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_continue        |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|start_out          | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|start_write        | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|req_strm_V_din     | out |   32|   ap_fifo  |  req_strm_V  |    pointer   |
+|req_strm_V_full_n  |  in |    1|   ap_fifo  |  req_strm_V  |    pointer   |
+|req_strm_V_write   | out |    1|   ap_fifo  |  req_strm_V  |    pointer   |
+|in_strm_V_dout     |  in |   32|   ap_fifo  |   in_strm_V  |    pointer   |
+|in_strm_V_empty_n  |  in |    1|   ap_fifo  |   in_strm_V  |    pointer   |
+|in_strm_V_read     | out |    1|   ap_fifo  |   in_strm_V  |    pointer   |
+|tb_address0        | out |    4|  ap_memory |      tb      |     array    |
+|tb_ce0             | out |    1|  ap_memory |      tb      |     array    |
+|tb_q0              |  in |   32|  ap_memory |      tb      |     array    |
++-------------------+-----+-----+------------+--------------+--------------+
+

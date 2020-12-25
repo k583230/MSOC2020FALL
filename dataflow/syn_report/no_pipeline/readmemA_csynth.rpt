@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vivado HLS Report for 'readmemA'
+================================================================
+* Date:           Sat Dec 12 22:34:57 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        proj_stable_content
+* Solution:       no_pipeline
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 13.33 ns | 2.616 ns |   1.67 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       21|       21| 0.280 us | 0.280 us |   21|   21|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- A       |       20|       20|         2|          -|          -|    10|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      -|        -|        -|    -|
+|Expression           |        -|      -|        0|       43|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|        -|        -|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|       81|    -|
+|Register             |        -|      -|       45|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      0|       45|      124|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|      0|    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |i_fu_116_p2          |     +    |      0|  0|   6|           4|           1|
+    |ap_block_state2      |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_102     |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln21_fu_110_p2  |   icmp   |      0|  0|   9|           4|           4|
+    |icmp_ln25_fu_127_p2  |   icmp   |      0|  0|  20|          32|           4|
+    |ap_block_state1      |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3      |    or    |      0|  0|   2|           1|           1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0|  43|          44|          13|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  21|          4|    1|          4|
+    |ap_done           |   9|          2|    1|          2|
+    |i_0_reg_99        |   9|          2|    4|          8|
+    |in_strm_V_blk_n   |   9|          2|    1|          2|
+    |real_start        |   9|          2|    1|          2|
+    |req_strm_V_blk_n  |   9|          2|    1|          2|
+    |req_strm_V_din    |  15|          3|   32|         96|
+    +------------------+----+-----------+-----+-----------+
+    |Total             |  81|         17|   41|        116|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |   3|   0|    3|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |i_0_reg_99      |   4|   0|    4|          0|
+    |i_reg_136       |   4|   0|    4|          0|
+    |start_once_reg  |   1|   0|    1|          0|
+    |tmp_reg_141     |  32|   0|   32|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  45|   0|   45|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|start_full_n       |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_done            | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_continue        |  in |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|start_out          | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|start_write        | out |    1| ap_ctrl_hs |   readmemA   | return value |
+|in_strm_V_dout     |  in |   32|   ap_fifo  |   in_strm_V  |    pointer   |
+|in_strm_V_empty_n  |  in |    1|   ap_fifo  |   in_strm_V  |    pointer   |
+|in_strm_V_read     | out |    1|   ap_fifo  |   in_strm_V  |    pointer   |
+|req_strm_V_din     | out |   32|   ap_fifo  |  req_strm_V  |    pointer   |
+|req_strm_V_full_n  |  in |    1|   ap_fifo  |  req_strm_V  |    pointer   |
+|req_strm_V_write   | out |    1|   ap_fifo  |  req_strm_V  |    pointer   |
+|tb_address0        | out |    4|  ap_memory |      tb      |     array    |
+|tb_ce0             | out |    1|  ap_memory |      tb      |     array    |
+|tb_q0              |  in |   32|  ap_memory |      tb      |     array    |
++-------------------+-----+-----+------------+--------------+--------------+
+
