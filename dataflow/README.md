@@ -26,10 +26,10 @@
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* HLS Simulation: use example.cpp example.h as source and example_test.cpp as testbench on Vivado HLS
-* FPGA: use dataflow.ipynb to run on Zedboard
+* **HLS Simulation:** use example.cpp example.h as source and example_test.cpp as testbench on Vivado HLS
+* **FPGA:** use dataflow.ipynb to run on Zedboard
 ## Algorithm
-* Integer addition 
+* Integer addition of pre-saved array 
 
 ## References
 * ~Xilinx/Vivado/2019.2/examples/design
